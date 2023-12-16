@@ -18,9 +18,9 @@ const Test = (props) => {
       <td className='testBodyName'>{props.test.name}</td>
       <td className='testBodyType'>{props.test.type}</td>
       <td 
-        className={props.test.status === 'ONLINE' ? 'testBodyStatus greenStatus'
-        : props.test.status === 'DRAFT' ? 'testBodyStatus grayStatus'
-        : props.test.status === 'PAUSED' ? 'testBodyStatus orangeStatus'
+        className={props.test.status === 'Online' ? 'testBodyStatus greenStatus'
+        : props.test.status === 'Draft' ? 'testBodyStatus grayStatus'
+        : props.test.status === 'Paused' ? 'testBodyStatus orangeStatus'
         : 'testBodyStatus redStatus'
         }
       >

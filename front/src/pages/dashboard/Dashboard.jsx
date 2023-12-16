@@ -13,10 +13,10 @@ const Dashboard = () => {
   const [query, setQuery] = useState("");
 
   const statusSortObj = {
-    ONLINE: 1,
-    PAUSED: 2,
-    STOPPED: 3,
-    DRAFT: 4
+    Online: 1,
+    Paused: 2,
+    Stopped: 3,
+    Draft: 4
   };
 
   const upperCaseFirstLetter = string =>
@@ -30,6 +30,7 @@ const Dashboard = () => {
   const handleInput = (e) => {
     setQuery(e.target.value);
   };
+  
   const setSortByColumnArr = (sortId, nameOfColumn) => {
     let newArr = sortByColumn.map((item, index) => index === sortId ? !item : false);
     setSortByColumn(newArr);
@@ -76,35 +77,40 @@ const Dashboard = () => {
   };
 
   const loadSites = async() => {
-    const response = await axios.get(`http://localhost:3100/sites`);
-    const data = await response.data
-    let newArr = data?.map(item => ({...item,
-      url: item.url.replace("https://www.", "").replace("https://", "").replace("http://", "").trim()
-    }));
+    try {
+      const response = await axios.get(`http://localhost:3100/sites`);
+      const data = await response.data
+      let newArr = data?.map(item => ({...item,
+        url: item.url.replace("https://www.", "").replace("https://", "").replace("http://", "").trim()
+      }));
     setSites(newArr);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   const loadTests = async() => {
-    const response = await axios.get(`http://localhost:3100/tests`);
-    const data = await response.data;
-    let newArr = data.map(item => ({
-      ...item, 
-      status: upperCaseFirstLetter(lowerCaseAllWordsExceptFirstLetters(item.status)),
-      type: item.type !== 'MVT' ? upperCaseFirstLetter(lowerCaseAllWordsExceptFirstLetters(item.type)) : item.type
-    }))
-    // upperCaseFirstLetter(lowerCaseAllWordsExceptFirstLetters(input))
-    let newArr1 = getSortedTests(newArr);
-    setFilterByName(newArr1);
+    try {
+      const response = await axios.get(`http://localhost:3100/tests`);
+      const data = await response.data;
+      let newArr = data.map(item => ({
+        ...item, 
+        status: upperCaseFirstLetter(lowerCaseAllWordsExceptFirstLetters(item.status)),
+        type: item.type !== 'MVT' ? upperCaseFirstLetter(lowerCaseAllWordsExceptFirstLetters(item.type)) : item.type
+      }))
+      let newArr1 = getSortedTests(newArr);
+      setFilterByName(newArr1);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const getSiteUrl = (siteId) => {
-    return sites?.find(elem => elem.id === siteId).url;
+    return sites?.find(elem => elem.id === siteId)?.url;
   };
  
   useEffect(() => {
-    loadSites();
-    loadTests();
-    console.log(tests)
+    loadSites().then(loadTests());
     // eslint-disable-next-line
   },[sortByColumn, query]);
 
@@ -149,7 +155,6 @@ const Dashboard = () => {
         </tbody>
       </table>
       }
-
 
       {/* MESSAGE */}
       {tests.length === 0 &&
