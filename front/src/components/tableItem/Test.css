@@ -1,0 +1,90 @@
+.test {
+  margin-bottom: 5px;
+  width: 100%;
+  border-radius: 3px;
+  background: #FFF;
+  display: flex;
+  align-items: center;
+}
+.test:hover {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+}
+.testBodyName {
+  width: calc(389 / 954 * 100%);
+  text-align: left;
+  margin-left: calc(11 / 954 * 100%);
+  color: #474747;
+  font-family: Roboto;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.testBodyType, .testBodySite {
+  color: #5C5C5C;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  /* text-transform: lowercase; */
+}
+.testBodyType {
+  width: calc(100 / 954 * 100%);
+  text-align: left;
+  margin-left: calc(25 / 954 * 100%);
+}
+.testBodySite {
+  width: calc(117 / 954 * 100%);
+  text-align: left;
+  margin-left: calc(54 / 954 * 100%);
+}
+.testBodyStatus {
+  width: calc(62 / 954 * 100%);
+  text-align: left;
+  margin-left: calc(25 / 954 * 100%);
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  /* text-transform: lowercase; */
+}
+.greenStatus {
+  color: #1BDA9D;
+}
+.grayStatus {
+  color: #5C5C5C;
+}
+.orangeStatus {
+  color: #FF8346;
+}
+.redStatus {
+  color: #FE4848;
+}
+
+.testButtonGreen,.testButtonGray {
+  width: 95px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: none;
+  background: #2EE5AC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.testButtonGray {
+  background: #7D7D7D;
+}
+/* .Link {
+  color: #FFF ;
+  text-decoration: none;
+} */

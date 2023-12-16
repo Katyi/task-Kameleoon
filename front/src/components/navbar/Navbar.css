@@ -1,0 +1,14 @@
+.header {
+  height: auto;
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 40px 0px;
+}
+.headerTitle {
+  color: #222;
+  font-family: Montserrat;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+}

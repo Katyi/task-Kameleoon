@@ -1,0 +1,40 @@
+.resultsRow {
+  width: 100%;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+}
+.resultsTitle {
+  width: 10%;
+  color: #222;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.resultsInfo {
+  /* width: 30vw; */
+  color: #222;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.bottomRow {
+  position: absolute;
+  bottom: 44px;
+  display: flex;
+  align-items: center;
+  gap: 18.96px;
+  cursor: pointer;
+}
+.backTitle {
+  color: #222;
+  font-family: Nunito;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
