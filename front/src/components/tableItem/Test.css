@@ -14,9 +14,7 @@
   display: flex;
   background: transparent;
   height: 100%;
-  align-items: start;
 }
-
 .testBodyName {
   width: calc(389 / 954 * 100%);
   text-align: left;
