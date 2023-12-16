@@ -78,7 +78,8 @@ const Dashboard = () => {
 
   const loadSites = async() => {
     try {
-      const response = await axios.get(`http://localhost:3100/sites`);
+      // const response = await axios.get(`http://localhost:3100/sites`);
+      const response = await axios.get(`https://mock-api-for-tests.onrender.com/sites`);
       const data = await response.data
       let newArr = data?.map(item => ({...item,
         url: item.url.replace("https://www.", "").replace("https://", "").replace("http://", "").trim()
@@ -91,7 +92,8 @@ const Dashboard = () => {
 
   const loadTests = async() => {
     try {
-      const response = await axios.get(`http://localhost:3100/tests`);
+      // const response = await axios.get(`http://localhost:3100/tests`);
+      const response = await axios.get(`https://mock-api-for-tests.onrender.com/tests`);
       const data = await response.data;
       let newArr = data.map(item => ({
         ...item, 
