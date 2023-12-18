@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/task-Kameleoon/static/css/main.6232c5bc.css",
+    "main.css": "/task-Kameleoon/static/css/main.4477ec30.css",
     "main.js": "/task-Kameleoon/static/js/main.da2e8f9e.js",
     "static/media/Search.svg": "/task-Kameleoon/static/media/Search.5a18a1eb55a4ff3f0529c2fd0f2a263f.svg",
     "index.html": "/task-Kameleoon/index.html",
@@ -8,11 +8,11 @@
     "static/media/RectangleBlue.svg": "/task-Kameleoon/static/media/RectangleBlue.04947503faa4a36d4d6ecca7f97838c4.svg",
     "static/media/RectangleLightBlue.svg": "/task-Kameleoon/static/media/RectangleLightBlue.32295013d423ca0a247102f1ccd0dd58.svg",
     "static/media/RectangleRed.svg": "/task-Kameleoon/static/media/RectangleRed.d1cc3faefab0c37733de7d6d00e15bc2.svg",
-    "main.6232c5bc.css.map": "/task-Kameleoon/static/css/main.6232c5bc.css.map",
+    "main.4477ec30.css.map": "/task-Kameleoon/static/css/main.4477ec30.css.map",
     "main.da2e8f9e.js.map": "/task-Kameleoon/static/js/main.da2e8f9e.js.map"
   },
   "entrypoints": [
-    "static/css/main.6232c5bc.css",
+    "static/css/main.4477ec30.css",
     "static/js/main.da2e8f9e.js"
   ]
 }
